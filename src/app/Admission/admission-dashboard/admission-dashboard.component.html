@@ -1,0 +1,500 @@
+<div class="row g-3">
+  <div class="bg-success p-2 text-dark bg-opacity-50 text-center"><h4>Admisstion Process</h4></div>
+  <!-- Enquiry -->
+  <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-primary bg-opacity-75 text-white clickable-card h-100 position-relative" (click)="navigate('/enquiry')">
+      <div class="card-body text-center">
+        <i class="bi bi-question-circle fs-2"></i>
+        <h5 class="card-title mt-2">Enquiries</h5>
+        <p class="mb-0">{{ enquiryCount }} Records</p>
+      </div>
+      <!-- Dropdown -->
+      <div class="position-absolute top-0 end-0 p-2" (click)="$event.stopPropagation()">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-transparent text-white dropdown-toggle" data-bs-toggle="dropdown">
+            ⋮
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#/dashboard">Action</a></li>
+            <li><a class="dropdown-item" href="#/dashboard">Another action</a></li>
+            <li><a class="dropdown-item" href="#/dashboard">Something else</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><button class="dropdown-item">Separated link</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Entrance Exam -->
+  <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-success bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/entrance-exam')">
+      <div class="card-body">
+        <i class="bi bi-journal-text fs-2"></i>
+        <h5 class="card-title mt-2">Entrance Exams</h5>
+        <p class="mb-0">{{ entranceExamCount }} Scheduled</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admission -->
+  <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-warning bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/admission')">
+      <div class="card-body">
+        <i class="bi bi-person-check fs-2"></i>
+        <h5 class="card-title mt-2">Admissions</h5>
+        <p class="mb-0">{{ admissionCount }} New</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admission Old -->
+  <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-danger bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/admission-old')">
+      <div class="card-body">
+        <i class="bi bi-archive fs-2"></i>
+        <h5 class="card-title mt-2">Old Admissions</h5>
+        <p class="mb-0">{{ oldAdmissionCount }} Records</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Student Import -->
+  <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-secondary bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/student-import')">
+      <div class="card-body">
+        <i class="bi bi-upload fs-2"></i>
+        <h5 class="card-title mt-2">Student Import</h5>
+        <p class="mb-0">{{ importCount }} Imported</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reports -->
+  <!-- <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-info bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/reports')">
+      <div class="card-body">
+        <i class="bi bi-bar-chart fs-2"></i>
+        <h5 class="card-title mt-2">Reports</h5>
+        <p class="mb-0">{{ reportCount }} Available</p>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+
+
+<!--  reports -->
+ <!-- <div class="row g-3">-->
+  <!-- Enquiry -->
+   <!-- <div class="bg-success p-2 text-dark bg-opacity-50 text-center"><h4>Reports</h4></div>
+  <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-primary bg-opacity-75 text-white clickable-card h-100 position-relative" (click)="navigate('/enquiry')">
+      <div class="card-body text-center">
+        <i class="bi bi-question-circle fs-2"></i>
+        <h5 class="card-title mt-2">Enquiries</h5>
+        <p class="mb-0">{{ enquiryCount }} Records</p>
+      </div> -->
+      <!-- Dropdown -->
+      <!-- <div class="position-absolute top-0 end-0 p-2" (click)="$event.stopPropagation()">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-transparent text-white dropdown-toggle" data-bs-toggle="dropdown">
+            ⋮
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#/dashboard">Action</a></li>
+            <li><a class="dropdown-item" href="#/dashboard">Another action</a></li>
+            <li><a class="dropdown-item" href="#/dashboard">Something else</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><button class="dropdown-item">Separated link</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Entrance Exam -->
+  <!-- <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-success bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/entrance-exam')">
+      <div class="card-body">
+        <i class="bi bi-journal-text fs-2"></i>
+        <h5 class="card-title mt-2">Form Sale</h5>
+        <p class="mb-0">{{ entranceExamCount }} Scheduled</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Admission -->
+  <!-- <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-warning bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/admission')">
+      <div class="card-body">
+        <i class="bi bi-person-check fs-2"></i>
+        <h5 class="card-title mt-2">Entrance Exam</h5>
+        <p class="mb-0">{{ admissionCount }} New</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Admission Old -->
+  <!-- <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+    <div class="card bg-danger bg-opacity-75 text-white clickable-card h-100 text-center" (click)="navigate('/admission-old')">
+      <div class="card-body">
+        <i class="bi bi-archive fs-2"></i>
+        <h5 class="card-title mt-2">Admission</h5>
+        <p class="mb-0">{{ oldAdmissionCount }}Admission</p>
+      </div>
+    </div>
+  </div> -->
+
+
+
+ 
+<!-- </div> --> 
+
+
+<!-- ===================================================================================================================== -->
+
+<hr>
+
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-dark text-white">
+      <h4 class="mb-0"><i class="bi bi-grid-fill me-2"></i>Admission Reports</h4>
+    </div>
+    <div class="card-body">
+
+      <!-- Tabs -->
+      <ul class="nav nav-tabs nav-pills justify-content-center" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'inquiry'"
+            (click)="setActiveTab('inquiry')" data-bs-toggle="tab" data-bs-target="#inquiry"
+            type="button">Inquiry</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'form-sale'"
+            (click)="setActiveTab('form-sale')" data-bs-toggle="tab" data-bs-target="#form-sale"
+            type="button">Form Sale</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'exam'"
+            (click)="setActiveTab('exam')" data-bs-toggle="tab" data-bs-target="#exam"
+            type="button">Entrance Exam</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'admission'"
+            (click)="setActiveTab('admission')" data-bs-toggle="tab" data-bs-target="#admission"
+            type="button">Admission</button>
+        </li>
+      </ul>
+
+      <!-- Tab Contents -->
+      <div class="tab-content mt-3">
+        <div class="tab-pane fade" [class.show]="activeTab === 'inquiry'" [class.active]="activeTab === 'inquiry'" id="inquiry">
+          <h5 class="text-center text-primary">Search Inquiry Report</h5>
+          <!-- Inquiry content -->
+          <!-- <p>Inquiry content goes here.</p> -->
+
+                              <div class="row m-0 mt-2 p-2 card">
+                        <div id="ContentPlaceHolder1_nestedContent_div1" class="row border card-body p-2 m-0">
+                            <div class="col-md-2">
+                                Academic Year
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$academicyear" id="ContentPlaceHolder1_nestedContent_academicyear" class="form-control">
+	<option selected="selected" value="%">--All--</option>
+	<option value="2025-2026">2025-2026</option>
+	<option value="2027-2028">2027-2028</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Class
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquiryclass" id="ContentPlaceHolder1_nestedContent_enquiryclass" class="form-control">
+	<option selected="selected" value="%">All</option>
+	<option value="NURSERY">NURSERY</option>
+	<option value="PLAY GROUP">PLAY GROUP</option>
+	<option value="LKG">LKG</option>
+	<option value="UKG">UKG</option>
+	<option value="I">I</option>
+	<option value="II">II</option>
+	<option value="III">III</option>
+	<option value="IV">IV</option>
+	<option value="V">V</option>
+	<option value="VI">VI</option>
+	<option value="VII">VII</option>
+	<option value="VIII">VIII</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Date (From)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$from" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_from" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Date (To)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$to" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_to" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Type
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquirytype" id="ContentPlaceHolder1_nestedContent_enquirytype" class="form-control">
+	<option selected="selected" value="%">All</option>
+
+</select>
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$search" value="Search" id="ContentPlaceHolder1_nestedContent_search" class="btn w-100 btn-success" />
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$export" value="Export" id="ContentPlaceHolder1_nestedContent_export" class="btn w-100 btn-danger " />
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_nestedContent_div2" class="row border card card-body table-responsive m-0 p-1 mt-1">
+                            <div>
+	<table class="table table-striped table-bordered table-hover" cellspacing="0" id="grddata" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">SN</th><th class="d-none" scope="col">sn</th><th scope="col">Session</th><th scope="col">Enquiry No</th><th scope="col">Date</th><th scope="col">Class</th><th scope="col">Name</th><th scope="col">Father Name</th><th scope="col">Contact No</th><th scope="col">Status</th><th scope="col">Reg Amnt</th><th scope="col">Result</th><th scope="col">Adm No</th><th scope="col">&nbsp;</th>
+		</tr><tr>
+			<td colspan="14">No Data Found</td>
+		</tr>
+	</table>
+</div>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="tab-pane fade" [class.show]="activeTab === 'form-sale'" [class.active]="activeTab === 'form-sale'" id="form-sale">
+          <h5 class="text-center text-primary">Form Sale Report</h5>
+          <!-- Form Sale content -->
+          <!-- <p>Form Sale content goes here.</p> -->
+                              <div class="row m-0 mt-2 p-2 card">
+                        <div id="ContentPlaceHolder1_nestedContent_div1" class="row border card-body p-2 m-0">
+                            <div class="col-md-2">
+                                Academic Year
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$academicyear" id="ContentPlaceHolder1_nestedContent_academicyear" class="form-control">
+	<option selected="selected" value="%">--All--</option>
+	<option value="2025-2026">2025-2026</option>
+	<option value="2027-2028">2027-2028</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Class
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquiryclass" id="ContentPlaceHolder1_nestedContent_enquiryclass" class="form-control">
+	<option selected="selected" value="%">All</option>
+	<option value="NURSERY">NURSERY</option>
+	<option value="PLAY GROUP">PLAY GROUP</option>
+	<option value="LKG">LKG</option>
+	<option value="UKG">UKG</option>
+	<option value="I">I</option>
+	<option value="II">II</option>
+	<option value="III">III</option>
+	<option value="IV">IV</option>
+	<option value="V">V</option>
+	<option value="VI">VI</option>
+	<option value="VII">VII</option>
+	<option value="VIII">VIII</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Date (From)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$from" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_from" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Date (To)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$to" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_to" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Type
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquirytype" id="ContentPlaceHolder1_nestedContent_enquirytype" class="form-control">
+	<option selected="selected" value="%">All</option>
+
+</select>
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$search" value="Search" id="ContentPlaceHolder1_nestedContent_search" class="btn w-100 btn-success" />
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$export" value="Export" id="ContentPlaceHolder1_nestedContent_export" class="btn w-100 btn-danger " />
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_nestedContent_div2" class="row border card card-body table-responsive m-0 p-1 mt-1">
+                            <div>
+	<table class="table table-striped table-bordered table-hover" cellspacing="0" id="grddata" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">SN</th><th class="d-none" scope="col">sn</th><th scope="col">Session</th><th scope="col">Enquiry No</th><th scope="col">Date</th><th scope="col">Class</th><th scope="col">Name</th><th scope="col">Father Name</th><th scope="col">Contact No</th><th scope="col">Status</th><th scope="col">Reg Amnt</th><th scope="col">Result</th><th scope="col">Adm No</th><th scope="col">&nbsp;</th>
+		</tr><tr>
+			<td colspan="14">No Data Found</td>
+		</tr>
+	</table>
+</div>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="tab-pane fade" [class.show]="activeTab === 'exam'" [class.active]="activeTab === 'exam'" id="exam">
+          <h5 class="text-center text-primary">Entrance Exam Report</h5>
+          <!-- Entrance Exam content -->
+          <!-- <p>Entrance Exam content goes here.</p> -->
+                              <div class="row m-0 mt-2 p-2 card">
+                        <div id="ContentPlaceHolder1_nestedContent_div1" class="row border card-body p-2 m-0">
+                            <div class="col-md-2">
+                                Academic Year
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$academicyear" id="ContentPlaceHolder1_nestedContent_academicyear" class="form-control">
+	<option selected="selected" value="%">--All--</option>
+	<option value="2025-2026">2025-2026</option>
+	<option value="2027-2028">2027-2028</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Class
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquiryclass" id="ContentPlaceHolder1_nestedContent_enquiryclass" class="form-control">
+	<option selected="selected" value="%">All</option>
+	<option value="NURSERY">NURSERY</option>
+	<option value="PLAY GROUP">PLAY GROUP</option>
+	<option value="LKG">LKG</option>
+	<option value="UKG">UKG</option>
+	<option value="I">I</option>
+	<option value="II">II</option>
+	<option value="III">III</option>
+	<option value="IV">IV</option>
+	<option value="V">V</option>
+	<option value="VI">VI</option>
+	<option value="VII">VII</option>
+	<option value="VIII">VIII</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Date (From)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$from" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_from" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Date (To)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$to" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_to" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Type
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquirytype" id="ContentPlaceHolder1_nestedContent_enquirytype" class="form-control">
+	<option selected="selected" value="%">All</option>
+
+</select>
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$search" value="Search" id="ContentPlaceHolder1_nestedContent_search" class="btn w-100 btn-success" />
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$export" value="Export" id="ContentPlaceHolder1_nestedContent_export" class="btn w-100 btn-danger " />
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_nestedContent_div2" class="row border card card-body table-responsive m-0 p-1 mt-1">
+                            <div>
+	<table class="table table-striped table-bordered table-hover" cellspacing="0" id="grddata" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">SN</th><th class="d-none" scope="col">sn</th><th scope="col">Session</th><th scope="col">Enquiry No</th><th scope="col">Date</th><th scope="col">Class</th><th scope="col">Name</th><th scope="col">Father Name</th><th scope="col">Contact No</th><th scope="col">Status</th><th scope="col">Reg Amnt</th><th scope="col">Result</th><th scope="col">Adm No</th><th scope="col">&nbsp;</th>
+		</tr><tr>
+			<td colspan="14">No Data Found</td>
+		</tr>
+	</table>
+</div>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="tab-pane fade" [class.show]="activeTab === 'admission'" [class.active]="activeTab === 'admission'" id="admission">
+          <h5 class="text-center text-primary">Admission Report</h5>
+          <!-- Admission content -->
+          <!-- <p>Admission content goes here.</p> -->
+                              <div class="row m-0 mt-2 p-2 card">
+                        <div id="ContentPlaceHolder1_nestedContent_div1" class="row border card-body p-2 m-0">
+                            <div class="col-md-2">
+                                Academic Year
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$academicyear" id="ContentPlaceHolder1_nestedContent_academicyear" class="form-control">
+	<option selected="selected" value="%">--All--</option>
+	<option value="2025-2026">2025-2026</option>
+	<option value="2027-2028">2027-2028</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Class
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquiryclass" id="ContentPlaceHolder1_nestedContent_enquiryclass" class="form-control">
+	<option selected="selected" value="%">All</option>
+	<option value="NURSERY">NURSERY</option>
+	<option value="PLAY GROUP">PLAY GROUP</option>
+	<option value="LKG">LKG</option>
+	<option value="UKG">UKG</option>
+	<option value="I">I</option>
+	<option value="II">II</option>
+	<option value="III">III</option>
+	<option value="IV">IV</option>
+	<option value="V">V</option>
+	<option value="VI">VI</option>
+	<option value="VII">VII</option>
+	<option value="VIII">VIII</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Date (From)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$from" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_from" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Date (To)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$to" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_to" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Type
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquirytype" id="ContentPlaceHolder1_nestedContent_enquirytype" class="form-control">
+	<option selected="selected" value="%">All</option>
+
+</select>
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$search" value="Search" id="ContentPlaceHolder1_nestedContent_search" class="btn w-100 btn-success" />
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$export" value="Export" id="ContentPlaceHolder1_nestedContent_export" class="btn w-100 btn-danger " />
+                            </div>
+                        </div>
+                        <div id="ContentPlaceHolder1_nestedContent_div2" class="row border card card-body table-responsive m-0 p-1 mt-1">
+                            <div>
+	<table class="table table-striped table-bordered table-hover" cellspacing="0" id="grddata" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">SN</th><th class="d-none" scope="col">sn</th><th scope="col">Session</th><th scope="col">Enquiry No</th><th scope="col">Date</th><th scope="col">Class</th><th scope="col">Name</th><th scope="col">Father Name</th><th scope="col">Contact No</th><th scope="col">Status</th><th scope="col">Reg Amnt</th><th scope="col">Result</th><th scope="col">Adm No</th><th scope="col">&nbsp;</th>
+		</tr><tr>
+			<td colspan="14">No Data Found</td>
+		</tr>
+	</table>
+</div>
+                        </div>
+                    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+
+

@@ -1,0 +1,44 @@
+<!-- <p>header works!</p> -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">🏫 School Dashboard</a>
+    <button class="btn btn-outline-light ms-auto" type="button">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </button>
+  </div>
+</nav> -->
+<header>
+  <div class="row   align-items-center px-3 py-2 header">
+    <!-- School Name -->
+    <div class="col-4 col-sm-4 d-flex align-items-center">
+      <button
+        class="btn btn-outline-light d-md-none me-2"  (click)="onToggleSidebar()"
+      >
+        ☰
+      </button>
+      <h6 class="m-0">School</h6>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="col-4 col-sm-4 text-center">
+      <form class="d-flex justify-content-center" >
+        <input
+          class="form-control form-control-sm"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          style="max-width: 100px;"
+        /> <button class="btn btn-outline-light ms-2" type="submit" title="Search">
+          <i class="bi bi-search"></i> <!-- Bootstrap Icons (if using) -->
+        </button>
+      </form>
+    </div>
+
+    <!-- User Info -->
+    <div class="col-4 col-sm-4 text-end small">
+      <div>User Name</div>
+      <div><small>Admin</small></div>
+    </div>
+  </div>
+</header>
+

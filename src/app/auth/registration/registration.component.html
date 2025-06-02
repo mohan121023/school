@@ -1,0 +1,91 @@
+
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0">User  Registration</h4>
+    </div>
+    <div class="card-body">
+ <form #registrationForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="row g-3">
+
+    <!-- Name -->
+    <div class="col-md-3">
+      <label class="form-label">Name</label>
+      <div class="input-group">
+        <span class="input-group-text text-primary"><i class="bi bi-person-fill"></i></span>
+        <input type="text" class="form-control" name="name" [(ngModel)]="name" required />
+      </div>
+    </div>
+
+    <!-- Username -->
+    <div class="col-md-3">
+      <label class="form-label">Username</label>
+      <div class="input-group">
+        <span class="input-group-text text-info"><i class="bi bi-person-circle"></i></span>
+        <input type="text" class="form-control" name="username" [(ngModel)]="username" required />
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-3">
+      <label class="form-label">Email</label>
+      <div class="input-group">
+        <span class="input-group-text text-success"><i class="bi bi-envelope-fill"></i></span>
+        <input type="email" class="form-control" name="email" [(ngModel)]="email" required email />
+      </div>
+    </div>
+
+    <!-- Mobile No -->
+    <div class="col-md-3">
+      <label class="form-label">Mobile No</label>
+      <div class="input-group">
+        <span class="input-group-text text-secondary"><i class="bi bi-telephone-fill"></i></span>
+        <input type="tel" class="form-control" name="mobileNo" [(ngModel)]="mobileNo" required pattern="^[0-9]{10}$" />
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="col-md-3">
+      <label class="form-label">Password</label>
+      <div class="input-group">
+        <span class="input-group-text text-danger"><i class="bi bi-lock-fill"></i></span>
+        <input type="password" class="form-control" name="password" [(ngModel)]="password" required minlength="6" />
+      </div>
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="col-md-3">
+      <label class="form-label">Confirm Password</label>
+      <div class="input-group">
+        <span class="input-group-text text-danger"><i class="bi bi-lock-fill"></i></span>
+        <input type="password" class="form-control" name="confirmPassword" [(ngModel)]="confirmPassword" required />
+      </div>
+    </div>
+
+    <!-- User Type -->
+    <div class="col-md-3">
+      <label class="form-label">User Type</label>
+      <div class="input-group">
+        <select class="form-select" name="usersrole" [(ngModel)]="usersrole" required>
+          <option value="" selected>Select User</option>
+          <option value="admin">Admin</option>
+          <option value="candidate">Teacher</option>
+          <option value="employee">Student</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="col-12 text-center mt-4">
+      <button type="submit" class="btn btn-success me-2" >Submit</button>
+      <button type="reset" class="btn btn-danger me-2" (click)="resetForm()">Reset</button>
+      <a class="btn btn-primary" href="/login">Login</a>
+    </div>
+
+  </div>
+</form>
+    </div>
+  </div>
+</div>
+<hr>
+

@@ -1,0 +1,66 @@
+.hamburger {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    z-index: 1000;
+  }
+  /* Default (Desktop) */
+  input.form-control {
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+  
+  /* Hide hamburger by default on desktop */
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+  }
+  @media (max-width: 768px){
+    input.form-control
+    {
+        width: 200px; 
+        align-items: center;
+      }
+  }
+  header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  button {
+    padding: 4px 10px;
+  }
+  
+  @media (max-width: 576px) {
+    form.d-flex {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+  }
+
+  header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color:white;
+    background-color:#003B73; /* fallback if row bg fails */
+  }
+  
+  form input {
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+  #search-input {
+    max-width: 250px;
+  }
+}

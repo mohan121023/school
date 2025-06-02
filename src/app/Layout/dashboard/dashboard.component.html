@@ -1,0 +1,41 @@
+<!-- Full-page wrapper -->
+<div class="d-flex flex-column vh-100">
+  <!-- Header: fixed at top -->
+  <div class="flex-shrink-0">
+    
+    <app-header (toggleSidebar)="toggleSidebar()"></app-header>
+  </div>
+
+  <!-- Body: sidebar + content -->
+  <div class="d-flex flex-grow-1 overflow-hidden">
+    
+    <!-- Sidebar -->
+     <div class="sidebar border-end p-0" 
+     [ngClass]="{
+        'd-none': !isSidebarVisible && isMobile,
+        'd-block': isSidebarVisible || !isMobile
+      }"[ngStyle]="{ width: isSidebarVisible || !isMobile ? '250px' : '0' }"
+     >
+     <app-sidebar></app-sidebar>
+
+     </div>
+     
+    <div>
+      
+     
+      
+    
+     
+    </div>
+
+    <!-- Main Content: scrollable -->
+    <div class="flex-grow-1 overflow-auto p-3">
+      
+<router-outlet> </router-outlet>
+
+      
+    </div>
+    
+  </div>
+  
+</div>

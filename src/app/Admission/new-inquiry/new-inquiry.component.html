@@ -1,0 +1,267 @@
+<!-- <p>new-inquiry works!</p> -->
+<div class="container mt-1">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0"><i class="bi bi-person-lines-fill me-2"></i>New Inquiry Form</h4>
+    </div>
+    <div class="card-body">
+      <!-- Page Header -->
+      <section class="mb-4">
+        <h5>
+          <a routerLink="/inquiry"><i class="bi bi-arrow-left-circle-fill text-danger me-2"></i></a>
+          
+          <a routerLink="/inquiry" class="btn btn-warning float-end">View Inquiry List</a>
+        </h5>
+      </section>
+      <hr>
+
+      <form>
+        <!-- Enquiry Info -->
+        <span class="badge bg-primary mb-3"><h5 class="text-white m-0"><i class="bi-info-circle-fill me-2"></i>Inquiry Info</h5></span>
+        <div class="row g-3 mb-4">
+          <div class="col-md-2">
+            <label class="form-label">Inquiry Date</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-calendar-event-fill"></i></span>
+              <input type="date" class="form-control" name="enquirydate" value="2025-05-27">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Academic Year</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+              <select class="form-select" name="academicyear">
+                <option selected>2025–2026</option>
+                <option>2026–2027</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Class</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-book"></i></span>
+              <select class="form-select" name="enquiryclass" required>
+                <option>NURSERY</option>
+                <option>LKG</option>
+                <option>UKG</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label disable">Inquiry No</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-hash"></i></span>
+              <input type="text" class="form-control" name="enquiryno" readonly>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Prospectus</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-journal-text"></i></span>
+              <select class="form-select" name="prospectus">
+                <option>No</option>
+                <option>Yes</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Prospectus No</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-123"></i></span>
+              <input type="text" class="form-control" name="prospectusno" value="0">
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Info -->
+        <span class="badge bg-success mb-3"><h5 class="text-white m-0"><i class="bi-person-fill me-2"></i>Student Info</h5></span>
+        <div class="row g-3 mb-4">
+          <div class="col-md-1">
+            <label class="form-label">Prefix</label>
+            <select class="form-select">
+              <option>Mr.</option>
+              <option>Ms.</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">First Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person"></i></span>
+              <input type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Middle Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person-dash"></i></span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Last Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+              <input type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Gender</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-gender-ambiguous"></i></span>
+              <select class="form-select">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Date of Birth</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-calendar-date-fill"></i></span>
+              <input type="date" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Aadhar No</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-credit-card-2-front"></i></span>
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope-at-fill"></i></span>
+              <input type="email" class="form-control">
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Mobile No</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-phone-fill"></i></span>
+              <input type="text" class="form-control" maxlength="10" required>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Student Type</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-people-fill"></i></span>
+              <select class="form-select">
+                <option>Day Scholar</option>
+                <option>Hosteller</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+       <!-- Address -->
+<span class="badge bg-warning mb-3"><h5 class="text-white m-0"><i class="bi-geo-alt-fill me-2"></i>Address</h5></span>
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <label class="form-label">Address Line 1</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-house-door-fill"></i></span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Address Line 2</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-signpost-split-fill"></i></span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">District</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+      <select class="form-select"><option>MATHURA</option></select>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">State</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-flag-fill"></i></span>
+      <select class="form-select"><option>Uttar Pradesh</option></select>
+    </div>
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">Pincode</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-123"></i></span>
+      <input type="text" class="form-control" maxlength="6">
+    </div>
+  </div>
+</div>
+<!-- parents info -->
+<span class="badge bg-danger mb-3"><h5 class="text-white m-0"><i class=" bi-people-fill me-2"></i>Parents Info</h5></span>
+<div class="row g-3 mb-4">
+  <div class="col-md-3">
+    <label class="form-label">Father Name</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-person-badge-fill"></i></span>
+      <input type="text" class="form-control" required>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Father Mobile</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-phone"></i></span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Mother Name</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+      <input type="text" class="form-control" required>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Mother Mobile</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-phone"></i></span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+</div>
+
+<!-- Other Info -->
+ <span class="badge bg-dark mb-3"><h5 class="text-white m-0"><i class="bi bi-card-text me-2"></i>Other Info</h5></span>
+<div class="row g-3 mb-4">
+  <div class="col-md-6">
+    <label class="form-label">Current School Name</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-buildings"></i></span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Information Source</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-info-circle"></i></span>
+      <select class="form-select"><option>Others</option></select>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label class="form-label">Any Remark</label>
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-chat-dots-fill"></i></span>
+      <input type="text" class="form-control">
+    </div>
+  </div>
+</div>
+ <!-- Submit Buttons -->
+        <div class="text-center">
+          <button type="submit" class="btn btn-success me-2">
+            <i class="bi bi-save2 me-1"></i> Save Inquiry
+          </button>
+          <button type="reset" class="btn btn-danger">
+            <i class="bi bi-x-circle-fill me-1"></i> Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

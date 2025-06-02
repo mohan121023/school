@@ -1,0 +1,27 @@
+.clickable-card:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+/* Hide dropdown toggle initially */
+.dropdown-menu-toggle {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show dropdown on card hover */
+.card:hover .dropdown-menu-toggle {
+  opacity: 1;
+  pointer-events: auto;
+}
+.card-top-section {
+  height: 25%;
+  min-height: 60px; /* Adjust as needed */
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.card {
+  overflow: hidden;
+}

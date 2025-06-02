@@ -1,0 +1,698 @@
+<div class="d-flex" style="min-height: 100vh;">
+  <!-- Sidebar -->
+  <nav class="bg-dark text-white p-3" style="width: 250px;">
+    <h4 class="text-white mb-4">My Dashboard</h4>
+    <ul class="nav flex-column">
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="/dashboard" routerLinkActive="active">
+          <i class="bi bi-speedometer2 me-2"></i> Dashboard
+        </a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="/reports" routerLinkActive="active">
+          <i class="bi bi-bar-chart-line me-2"></i> Reports
+        </a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link text-white" routerLink="/settings" routerLinkActive="active">
+          <i class="bi bi-gear me-2"></i> Settings
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex-grow-1 p-4 bg-light">
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Dashboard</h2>
+      <button class="btn btn-primary">
+        <i class="bi bi-bell"></i> Notifications
+      </button>
+    </header>
+
+    <!-- Cards Row -->
+    <div class="row g-3 mb-4">
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Users</h5>
+            <h3>1,245</h3>
+            <small class="text-muted">Active users this month</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Sales</h5>
+            <h3>$45,678</h3>
+            <small class="text-muted">Monthly sales</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Visitors</h5>
+            <h3>7,890</h3>
+            <small class="text-muted">Website visits</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Orders</h5>
+            <h3>1,023</h3>
+            <small class="text-muted">New orders</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="card shadow-sm mb-4 p-3">
+      <h5>Sales Overview</h5>
+      <!-- <canvas baseChart
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [type]="'line'">
+      </canvas> -->
+    </div>
+
+    <!-- Table -->
+    <div class="card shadow-sm p-3">
+      <h5>Recent Users</h5>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Signup Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.signup | date }}</td>
+            <td>
+              <span class="badge bg-success" *ngIf="user.active">Active</span>
+              <span class="badge bg-secondary" *ngIf="!user.active">Inactive</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- sidebar.component.html -->
+<!-- <nav class="bg-dark text-white vh-100 p-3" style="width: 250px; position: fixed;">
+  <h4 class="text-center">School Panel</h4>
+  <hr>
+
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link text-white" routerLink="/dashboard">
+        <i class="bi bi-house-fill me-2"></i> Dashboard
+      </a>
+    </li>-->
+
+    <!-- Students Menu with Submenu -->
+    <!-- <li class="nav-item">
+      <a class="nav-link text-white" data-bs-toggle="collapse" href="#studentsSubmenu" role="button" aria-expanded="false">
+        <i class="bi bi-person-fill me-2"></i> Students <i class="bi bi-chevron-down float-end"></i>
+      </a>
+      <div class="collapse" id="studentsSubmenu">
+        <ul class="nav flex-column ms-3">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/students/admission">New Admission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/students/inquiry">Inquiry List</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+    <!-- Reports Menu -->
+   <!-- <li class="nav-item">
+      <a class="nav-link text-white" data-bs-toggle="collapse" href="#reportsSubmenu" role="button">
+        <i class="bi bi-clipboard-data me-2"></i> Reports <i class="bi bi-chevron-down float-end"></i>
+      </a>
+      <div class="collapse" id="reportsSubmenu">
+        <ul class="nav flex-column ms-3">
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/reports/fee">Fee Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/reports/attendance">Attendance Report</a>
+          </li>
+        </ul>
+      </div>
+    </li>
+
+  </ul>
+</nav>  -->
+
+
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-header bg-dark text-white">
+      <h4 class="mb-0"><i class="bi bi-grid-fill me-2"></i>Dashboard</h4>
+    </div>
+    <div class="card-body">
+
+      <!-- Tabs -->
+      <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="inquiry-tab" data-bs-toggle="tab" data-bs-target="#inquiry" type="button" role="tab">
+            Inquiry
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="admission-tab" data-bs-toggle="tab" data-bs-target="#admission" type="button" role="tab">
+            Admission
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="payment-tab" data-bs-toggle="tab" data-bs-target="#payment" type="button" role="tab">
+            Payment
+          </button>
+        </li>
+      </ul>
+
+      <!-- Tab Contents -->
+      <div class="tab-content mt-3" id="dashboardTabContent">
+
+        <!-- Inquiry Tab -->
+        <div class="tab-pane fade show active" id="inquiry" role="tabpanel">
+          <!-- <app-new-inquiry></app-new-inquiry> -->
+          
+        </div>
+
+        <!-- Admission Tab -->
+        <div class="tab-pane fade" id="admission" role="tabpanel">
+          <!-- <app-admission-form></app-admission-form> -->
+        </div>
+
+        <!-- Payment Tab -->
+        <div class="tab-pane fade" id="payment" role="tabpanel">
+          <!-- <app-payment-form></app-payment-form> -->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Concession  Fee-->
+
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0">Concession Form</h4>
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #formRef="ngForm">
+        <div class="row g-3">
+
+          <!-- SN -->
+          <div class="col-md-2">
+            <label class="form-label">SN</label>
+            <div class="input-group">
+              <span class="input-group-text text-primary"><i class="bi bi-person-fill"></i></span>
+              <input type="text" class="form-control" name="sn" [(ngModel)]="formData.sn" />
+            </div>
+          </div>
+
+          <!-- Academic Year -->
+          <div class="col-md-2">
+            <label class="form-label">Academic Year ID</label>
+            <div class="input-group">
+              <span class="input-group-text text-info"><i class="bi bi-calendar"></i></span>
+              <input type="text" class="form-control" name="academicYear" [(ngModel)]="formData.academicYear" />
+            </div>
+          </div>
+
+          <!-- Head Name -->
+          <div class="col-md-2">
+            <label class="form-label">Head Name</label>
+            <div class="input-group">
+              <span class="input-group-text text-success"><i class="bi bi-envelope-fill"></i></span>
+              <input type="text" class="form-control" name="headName" [(ngModel)]="formData.headName" />
+            </div>
+          </div>
+
+          <!-- Account -->
+          <div class="col-md-3">
+            <label class="form-label">Account</label>
+            <div class="input-group">
+              <span class="input-group-text text-secondary"><i class="bi bi-wallet2"></i></span>
+              <input type="text" class="form-control" name="account" [(ngModel)]="formData.account" />
+            </div>
+          </div>
+
+          <!-- Component -->
+          <div class="col-md-3">
+            <label class="form-label">Component</label>
+            <div class="input-group">
+              <span class="input-group-text text-danger"><i class="bi bi-gear-fill"></i></span>
+              <input type="text" class="form-control" name="component" [(ngModel)]="formData.component" />
+            </div>
+          </div>
+
+          <!-- Cycle Type -->
+          <div class="col-md-2">
+            <label class="form-label">Cycle Type</label>
+            <div class="input-group">
+              <select class="form-select" name="cycleType" [(ngModel)]="formData.cycleType">
+                <option value="" selected>Select Type</option>
+                <option value="Monthly">Monthly</option>
+                <option value="One Time">One Time</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Value -->
+          <div class="col-md-2">
+            <label class="form-label">Value</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="value" [(ngModel)]="formData.value" />
+            </div>
+          </div>
+
+          <!-- Value Type -->
+          <div class="col-md-2">
+            <label class="form-label">Value Type</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="valueType" [(ngModel)]="formData.valueType" />
+            </div>
+          </div>
+
+          <!-- Date -->
+          <div class="col-md-2">
+            <label class="form-label">Date</label>
+            <div class="input-group">
+              <input type="date" class="form-control" name="date" [(ngModel)]="formData.date" />
+            </div>
+          </div>
+
+          <!-- Created By -->
+          <div class="col-md-2">
+            <label class="form-label">Created By</label>
+            <div class="input-group">
+              <input type="text" class="form-control" name="createdBy" [(ngModel)]="formData.createdBy" />
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-success me-2">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="card card-body table-responsive m-2 p-2 border">
+      <table class="table table-striped table-bordered table-hover">
+        <thead class="table-primary text-center">
+          <tr>
+            <th>SN</th>
+            <th>Academic Year</th>
+            <th>Head Name</th>
+            <th>Account</th>
+            <th>Component</th>
+            <th>Cycle Type</th>
+            <th>Value</th>
+            <th>Value Type</th>
+            <th>Date</th>
+            <th>Created By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of tableData; let i = index">
+  <td class="text-center">{{ i + 1 }}</td>
+  <td class="text-center">{{ row.academicYear }}</td>
+  <td class="text-center">{{ row.headName }}</td>
+  <td class="text-center">{{ row.account }}</td>
+  <td class="text-center">{{ row.component }}</td>
+  <td class="text-center">{{ row.cycleType }}</td>
+  <td class="text-center">{{ row.value }}</td>
+  <td class="text-center">{{ row.valueType }}</td>
+  <td class="text-center">{{ row.date }}</td>
+  <td class="text-center">{{ row.createdBy }}</td>
+</tr>
+          <tr *ngIf="tableData.length === 0">
+            <td colspan="10" class="text-center">No Data Found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<hr>
+<!-- Exam Class Test  -->
+<div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0">Exam Class Test Form</h4>
+    </div>
+    <div class="card-body">
+    <form (ngSubmit)="onExamSubmit()" #formRef="ngForm">
+  <div class="row g-3">
+    <!-- SN -->
+    <div class="col-md-2">
+      <label class="form-label">SN</label>
+      <input type="text" class="form-control" name="sn" [(ngModel)]="formData.sn" />
+    </div>
+
+    <!-- Academic Year -->
+    <div class="col-md-2">
+      <label class="form-label">Academic Year</label>
+      <input type="text" class="form-control" name="academicYear" [(ngModel)]="formData.academicYear" />
+    </div>
+
+    <!-- Head Name -->
+    <div class="col-md-2">
+      <label class="form-label">Class Section</label>
+      <input type="text" class="form-control" name="headName" [(ngModel)]="formData.headName" />
+    </div>
+
+    <!-- Account -->
+    <div class="col-md-3">
+      <label class="form-label">Admin No</label>
+      <input type="text" class="form-control" name="account" [(ngModel)]="formData.account" />
+    </div>
+
+    <!-- Component -->
+    <div class="col-md-3">
+      <label class="form-label">Exam Monthly</label>
+      <input type="text" class="form-control" name="component" [(ngModel)]="formData.component" />
+    </div>
+
+    <!-- Exam Date -->
+    <div class="col-md-2">
+      <label class="form-label">Exam Date</label>
+      <input type="date" class="form-control" name="examDate" [(ngModel)]="formData.examDate" />
+    </div>
+
+    <!-- Exam Name -->
+    <div class="col-md-2">
+      <label class="form-label">Exam Name</label>
+      <input type="text" class="form-control" name="valueType" [(ngModel)]="formData.valueType" />
+    </div>
+
+    <!-- Subject -->
+    <div class="col-md-2">
+      <label class="form-label">Subject</label>
+      <input type="text" class="form-control" name="value" [(ngModel)]="formData.value" />
+    </div>
+
+    <!-- Max Marks -->
+    <div class="col-md-2">
+      <label class="form-label">Max Marks</label>
+      <input type="text" class="form-control" name="marks" [(ngModel)]="formData.marks" />
+    </div>
+
+    <!-- Created By -->
+    <div class="col-md-2">
+      <label class="form-label">Created By</label>
+      <input type="text" class="form-control" name="createdBy" [(ngModel)]="formData.createdBy" />
+    </div>
+
+    <!-- Submit -->
+    <div class="col-12 text-center mt-4">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </div>
+</form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="card card-body table-responsive m-2 p-2 border">
+     <table class="table table-striped table-bordered table-hover mt-4">
+  <thead class="table-primary text-center">
+    <tr>
+      <th>SN</th>
+      <th>Academic Year</th>
+      <th>Class Section</th>
+      <th>Admin No</th>
+      <th>Exam Monthly</th>
+      <th>Exam Date</th>
+      <th>Exam Name</th>
+      <th>Subject</th>
+      <th>Max Marks</th>
+      <th>Created By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of tableData; let i = index" class="text-center">
+      <td>{{ i + 1 }}</td>
+      <td>{{ row.academicYear }}</td>
+      <td>{{ row.headName }}</td>
+      <td>{{ row.account }}</td>
+      <td>{{ row.component }}</td>
+      <td>{{ row.examDate }}</td>
+      <td>{{ row.valueType }}</td>
+      <td>{{ row.value }}</td>
+      <td>{{ row.marks }}</td>
+      <td>{{ row.createdBy }}</td>
+    </tr>
+    <tr *ngIf="tableData.length === 0">
+      <td colspan="10" class="text-center">No Data Found</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+</div>
+<hr>
+
+<!-- Exam Grade  -->
+ <div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0">Exam Grade</h4>
+    </div>
+    <div class="card-body">
+    <form (ngSubmit)="onExamGradeSubmit()" #formRef="ngForm">
+  <div class="row g-3">
+    <!-- SN -->
+    <div class="col-md-2">
+      <label class="form-label">SN</label>
+      <input type="text" class="form-control" name="sn" [(ngModel)]="formData.sn" />
+    </div>
+
+    <!-- Academic Year -->
+    <div class="col-md-2">
+      <label class="form-label">Academic Year</label>
+      <input type="text" class="form-control" name="academicYear" [(ngModel)]="formData.academicYear" />
+    </div>
+
+    <!-- Head Name -->
+    <div class="col-md-2">
+      <label class="form-label">Class Name</label>
+      <input type="text" class="form-control" name="headName" [(ngModel)]="formData.classname"/>
+    </div>
+
+    <!-- Account -->
+    <div class="col-md-3">
+      <label class="form-label">Admin No</label>
+      <input type="text" class="form-control" name="account" [(ngModel)]="formData.adminno" />
+    </div>
+
+    <!-- Component -->
+    <div class="col-md-3">
+      <label class="form-label">Exam No</label>
+      <input type="text" class="form-control" name="component" [(ngModel)]="formData.examno" />
+    </div>
+
+    <!-- Exam Date -->
+    <div class="col-md-2">
+      <label class="form-label">Exam Name</label>
+      <input type="text" class="form-control" name="examDate" [(ngModel)]="formData.examname" />
+    </div>
+
+    <!-- Exam Name -->
+    <div class="col-md-2">
+      <label class="form-label">Subject Name</label>
+      <input type="text" class="form-control" name="valueType" [(ngModel)]="formData.subjectname" />
+    </div>
+
+    <!-- Subject -->
+    <div class="col-md-2">
+      <label class="form-label">Grade</label>
+      <input type="text" class="form-control" name="value" [(ngModel)]="formData.grade" />
+    </div>
+
+    <!-- Max Marks -->
+    <div class="col-md-2">
+      <label class="form-label">Skill</label>
+      <input type="text" class="form-control" name="marks" [(ngModel)]="formData.skill" />
+    </div>
+
+   
+
+    <!-- Submit -->
+    <div class="col-12 text-center mt-4">
+      <button type="submit" class="btn btn-success">Exam Grade Submit</button>
+    </div>
+  </div>
+</form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="card card-body table-responsive m-2 p-2 border">
+     <table class="table table-striped table-bordered table-hover mt-4">
+  <thead class="table-primary text-center">
+    <tr>
+      <th>SN</th>
+      <th>Academic Year</th>
+      <th>Class Name</th>
+      <th>Admin No</th>
+      <th>Exam No</th>
+      <th>Exam Name</th>
+      <th>Subject Name</th>
+      <th>Grade</th>
+      <th>Skill</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    
+    <tbody>
+  <tr *ngFor="let row of tableData; let i = index" class="text-center">
+    <td>{{ row.sn }}</td>
+    <td>{{ row.academicYear }}</td>
+    <td>{{ row.classname }}</td>
+    <td>{{ row.adminno }}</td>
+    <td>{{ row.examno }}</td>
+    <td>{{ row.examname }}</td>
+    <td>{{ row.subjectname }}</td>
+    <td>{{ row.grade }}</td>
+    <td>{{ row.skill }}</td>
+    <td>{{ row.createdBy }}</td>
+  </tr>
+<!-- </tbody> -->
+  </tbody>
+</table>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <div class="container mt-5">
+  <div class="card shadow">
+    <div class="card-header bg-primary text-white text-center">
+      <h4 class="mb-0">Search Enquiry</h4>
+    </div>
+    <div class="card-body">
+
+        
+<div id="content" class="container-fluid p-1 m-1 mt-1 mb-2">
+         
+  
+            <div class="container-fluid  p-1 mt-4 mt-md-4">
+                <div class="row m-0 p-0">
+                    <section class="page-header position-sticky">
+                        <h1><a href="DashBoard.aspx"><i class="fa fa-arrow-left-long font-weight-bold text-danger"></i></a>&nbsp;&nbsp;Enquiry
+                            <a href="NewEnquiry.aspx?sn=new" class=" btn2 btn-warning pl-2 pr-2 float-end">New Enquiry</a>
+                        </h1>
+                    </section>
+                    <div class="row m-0 mt-2 p-2 card">
+                        <div id="ContentPlaceHolder1_nestedContent_div1" class="row border card-body p-2 m-0">
+                            <div class="col-md-2">
+                                Academic Year
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$academicyear" id="ContentPlaceHolder1_nestedContent_academicyear" class="form-control">
+	<option selected="selected" value="%">--All--</option>
+	<option value="2025-2026">2025-2026</option>
+	<option value="2027-2028">2027-2028</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Class
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquiryclass" id="ContentPlaceHolder1_nestedContent_enquiryclass" class="form-control">
+	<option selected="selected" value="%">All</option>
+	<option value="NURSERY">NURSERY</option>
+	<option value="PLAY GROUP">PLAY GROUP</option>
+	<option value="LKG">LKG</option>
+	<option value="UKG">UKG</option>
+	<option value="I">I</option>
+	<option value="II">II</option>
+	<option value="III">III</option>
+	<option value="IV">IV</option>
+	<option value="V">V</option>
+	<option value="VI">VI</option>
+	<option value="VII">VII</option>
+	<option value="VIII">VIII</option>
+
+</select>
+                            </div>
+                            <div class="col-md-2">
+                                Date (From)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$from" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_from" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Date (To)
+                            <br />
+                                <input name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$to" type="date" value="2025-05-27" id="ContentPlaceHolder1_nestedContent_to" class="form-control" />
+                            </div>
+                            <div class="col-md-2">
+                                Type
+                            <br />
+                                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquirytype" id="ContentPlaceHolder1_nestedContent_enquirytype" class="form-control">
+	<option selected="selected" value="%">All</option>
+
+</select>
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$search" value="Search" id="ContentPlaceHolder1_nestedContent_search" class="btn w-100 btn-success" />
+                            </div>
+                            <div class="col-md-1"><br />
+                                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$export" value="Export" id="ContentPlaceHolder1_nestedContent_export" class="btn w-100 btn-danger " />
+                            </div>
+                        </div>
+
+                        <div id="ContentPlaceHolder1_nestedContent_div2" class="row border card card-body table-responsive m-0 p-1 mt-1">
+                            <div>
+	<table class="table table-striped table-bordered table-hover" cellspacing="0" id="grddata" style="border-collapse:collapse;">
+		<tr>
+			<th scope="col">SN</th><th class="d-none" scope="col">sn</th><th scope="col">Session</th><th scope="col">Enquiry No</th><th scope="col">Date</th><th scope="col">Class</th><th scope="col">Name</th><th scope="col">Father Name</th><th scope="col">Contact No</th><th scope="col">Status</th><th scope="col">Reg Amnt</th><th scope="col">Result</th><th scope="col">Adm No</th><th scope="col">&nbsp;</th>
+		</tr><tr>
+			<td colspan="14">No Data Found</td>
+		</tr>
+	</table>
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+           
+
+    </div>
+
+            </div>
+       -->
