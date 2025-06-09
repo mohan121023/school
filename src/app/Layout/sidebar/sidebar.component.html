@@ -37,15 +37,34 @@
 </div> -->
 
 <nav class="bg-dark text-white vh-100 p-3" style="width: 250px; overflow-y: auto;">
-  <h5 class="text-white mb-4">My App</h5>
+  <!-- <h5 class="text-white mb-4">My App</h5> -->
   <ul class="nav nav-pills flex-column mb-auto">
 
     <!-- Dashboard -->
     <li class="nav-item mb-1">
-      <a routerLink="/dashboard/home" routerLinkActive="active" class="nav-link text-white">
-        <i class="bi bi-house me-2"></i> Dashboard
+      <a routerLink="/dashboard" routerLinkActive="active" class="nav-link text-white">
+        <i class="bi bi-speedometer2 me-2"></i> Dashboard
       </a>
     </li>
+
+        <!-- Student dashboard-->
+   <li>
+            <a class="nav-link text-white d-flex justify-content-between align-items-center" 
+           data-bs-toggle="collapse" href="#student-submenu" role="button" aria-expanded="false" aria-controls="admissionSubmenu">
+          <span><i class="bi bi-person me-2"></i> Student Management</span>
+          <i class="bi bi-chevron-down"></i>
+        </a>
+            <div class="collapse" id="student-submenu">
+          <ul class="nav flex-column ps-3">
+            <li><a routerLink="/student_dashboard" class="nav-link text-white">Student-Dashboard</a></li>
+            <!-- <li><a routerLink="/inquiry" class="nav-link text-white">Enquiry</a></li>
+            <li><a routerLink="/entrance-exam" class="nav-link text-white">Entrance Exam</a></li>
+            <li><a routerLink="/admission" class="nav-link text-white">Admission</a></li>
+            <li><a routerLink="/admission-old" class="nav-link text-white">Admission (Old)</a></li>
+            <li><a routerLink="/student-import" class="nav-link text-white">Student Import</a></li> -->
+          </ul>
+        </div>
+          </li>
 
     <!-- Inquiry List -->
     <li class="nav-item mb-1">
@@ -101,10 +120,10 @@
         </a>
         <div class="collapse" id="reportSubmenu">
           <ul class="nav flex-column ps-3">
-            <li><a routerLink="/new_inquiry" class="nav-link text-white">Enquiry</a></li>
-            <li><a routerLink="/new_inquiry" class="nav-link text-white">Form Sale</a></li>
-            <li><a routerLink="/new_inquiry" class="nav-link text-white">Entrance Exam</a></li>
-            <li><a routerLink="/new_inquiry" class="nav-link text-white">Admission</a></li>
+            <li><a routerLink="/inquiry" class="nav-link text-white"> Enquiry</a></li>
+            <li><a routerLink="" class="nav-link text-white">Form Sale</a></li>
+            <li><a routerLink="" class="nav-link text-white">Entrance Exam</a></li>
+            <li><a routerLink="" class="nav-link text-white">Admission</a></li>
           </ul>
         </div>
       </li>

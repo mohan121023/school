@@ -1,0 +1,147 @@
+<!-- <p>editable-list works!</p> -->
+
+<div class="row m-0 mt-2 p-2 card">
+            <div id="ContentPlaceHolder1_nestedContent_div1" class="row border card-body p-2 m-0">
+              <div class="col-md-2">
+                Academic Year
+                <br />
+                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$academicyear"
+                  id="ContentPlaceHolder1_nestedContent_academicyear" class="form-control">
+                  <option selected="selected" value="%">--All--</option>
+                  <option value="2025-2026">2025-2026</option>
+                  <option value="2027-2028">2027-2028</option>
+
+                </select>
+              </div>
+              <div class="col-md-2">
+                Class
+                <br />
+                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquiryclass"
+                  id="ContentPlaceHolder1_nestedContent_enquiryclass" class="form-control">
+                  <option selected="selected" value="%">All</option>
+                  <option value="NURSERY">NURSERY</option>
+                  <option value="PLAY GROUP">PLAY GROUP</option>
+                  <option value="LKG">LKG</option>
+                  <option value="UKG">UKG</option>
+                  <option value="I">I</option>
+                  <option value="II">II</option>
+                  <option value="III">III</option>
+                  <option value="IV">IV</option>
+                  <option value="V">V</option>
+                  <option value="VI">VI</option>
+                  <option value="VII">VII</option>
+                  <option value="VIII">VIII</option>
+
+                </select>
+              </div>
+              <div class="col-md-2">
+                Section
+                <br />
+                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$enquiryclass"
+                  id="ContentPlaceHolder1_nestedContent_enquiryclass" class="form-control">
+                  <option selected="selected" value="%">A</option>
+                  <option value="NURSERY">B</option>
+                  <option value="PLAY GROUP">C</option>
+                  <option value="LKG">D</option>
+
+
+                </select>
+              </div>
+
+              <div class="col-md-2">
+                Feild To Change
+                <br />
+               
+                <select name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$fieldtochange" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ctl00$ContentPlaceHolder1$nestedContent$fieldtochange\',\'\')', 0)" id="ContentPlaceHolder1_nestedContent_fieldtochange" class="form-control" fdprocessedid="k31tki">
+	<option selected="selected" value="studentprefix">studentprefix</option>
+	<option value="firstname">firstname</option>
+	<option value="middlename">middlename</option>
+	<option value="lastname">lastname</option>
+	<option value="studentname">studentname</option>
+	<option value="studenttype">studenttype</option>
+	<option value="srnno">srnno</option>
+	<option value="udiseno">udiseno</option>
+	<option value="penno">penno</option>
+	<option value="gender">gender</option>
+	<option value="aadharno">aadharno</option>
+	<option value="panno">panno</option>
+	<option value="birthcertificateno">birthcertificateno</option>
+	<option value="transfercertificateno">transfercertificateno</option>
+	<option value="castecertificateno">castecertificateno</option>
+	<option value="email">email</option>
+	<option value="mobile">mobile</option>
+	<option value="phone">phone</option>
+	<option value="caste">caste</option>
+	<option value="category">category</option>
+	<option value="religion">religion</option>
+	<option value="address1">address1</option>
+	<option value="address2">address2</option>
+	<option value="city">city</option>
+	<option value="state">state</option>
+	<option value="country">country</option>
+	<option value="pincode">pincode</option>
+	<option value="nationality">nationality</option>
+	<option value="fatherprefix">fatherprefix</option>
+	<option value="fathername">fathername</option>
+	<option value="fathercontact">fathercontact</option>
+	<option value="fatheremail">fatheremail</option>
+	<option value="fatheraadharno">fatheraadharno</option>
+	<option value="fatherqualification">fatherqualification</option>
+	<option value="fatheroccupation">fatheroccupation</option>
+	<option value="fatherorganization">fatherorganization</option>
+	<option value="fatherdesignation">fatherdesignation</option>
+	<option value="fatherincome">fatherincome</option>
+	<option value="motherprefix">motherprefix</option>
+	<option value="mothername">mothername</option>
+	<option value="mothercontact">mothercontact</option>
+	<option value="motheremail">motheremail</option>
+	<option value="motheraadharno">motheraadharno</option>
+	<option value="motherqualification">motherqualification</option>
+	<option value="motheroccupation">motheroccupation</option>
+	<option value="motherorganization">motherorganization</option>
+	<option value="motherdesignation">motherdesignation</option>
+	<option value="motherincome">motherincome</option>
+	<option value="guardianname">guardianname</option>
+	<option value="guardiancontactno">guardiancontactno</option>
+	<option value="lastschool">lastschool</option>
+	<option value="lastclass">lastclass</option>
+	<option value="admissionyear">admissionyear</option>
+	<option value="admissionclass">admissionclass</option>
+
+</select>
+              </div>
+
+              <div class="col-md-1"><br />
+                <input type="submit" name="ctl00$ctl00$ContentPlaceHolder1$nestedContent$search" value="Save"
+                  id="ContentPlaceHolder1_nestedContent_search" class="btn w-100 btn-success" />
+              </div>
+              
+              <div class="col-md-1">
+                <p> Total Student </p><br />
+
+
+              </div>
+              <div id="ContentPlaceHolder1_nestedContent_div2"
+                class="row border card card-body table-responsive m-0 p-1 mt-1">
+                <div>
+                  <table class="table table-striped table-bordered table-hover" cellspacing="0" id="grddata"
+                    style="border-collapse:collapse;">
+                    <tr>
+                      <th scope="col">SN</th>
+                     
+                      <th scope="col">Session</th>
+                      <th scope="col">Adm. No</th>
+                      
+                      <th scope="col">Name</th>
+                      <th scope="col">Father Name</th>
+                      
+                      <th scope="col">Student Prefix </th>
+
+                      <th scope="col">&nbsp;</th>
+                    </tr>
+                    <tr>
+                      <td colspan="14">No Data Found</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>

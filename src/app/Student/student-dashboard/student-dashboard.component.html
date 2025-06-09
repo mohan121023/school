@@ -1,0 +1,55 @@
+<!-- Admission Preview Section -->
+<div class="row g-3">
+  <div class="col-12">
+    <div class="bg-success p-2 text-dark bg-opacity-50 text-center">
+      <h4>Student Management</h4>
+    </div>
+  </div>
+</div>
+
+<!-- Main Container -->
+<div class="container mt-5">
+
+  <!-- Grid of Admission Feature Boxes -->
+  <div class="row g-3 mb-4">
+    <div
+      class="col-6 col-sm-4 col-md-3 col-lg-2"
+      *ngFor="let box of admissionBoxes"
+      (click)="selectComponent(box.component)"
+    >
+      <div class="card text-white h-100 text-center clickable-card" [ngClass]="box.bgClass">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <i [class]="box.icon + ' fs-2 mb-2'"></i>
+          <h5 class="card-title">{{ box.title }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Selected Component Display Section -->
+  <div *ngIf="selectedComponent" class="card shadow">
+    <div class="card-header text-white d-flex justify-content-between align-items-center" [ngClass]="selectedBox?.bgClass">
+      <h5 class="mb-0">
+        <i [class]="selectedBox?.icon + ' me-2'"></i>
+        {{ selectedBox?.title }}
+      </h5>
+      <!-- <button class="btn btn-sm btn-light" (click)="goBack()">Back</button> -->
+    </div>
+    <div class="card-body">
+      <app-profile *ngIf="selectedComponent === 'profile'"></app-profile>
+      <app-section-change *ngIf="selectedComponent === 'section-change'"></app-section-change>
+      <app-status-change *ngIf="selectedComponent === 'status-change'"></app-status-change>
+      <app-editable-list *ngIf="selectedComponent === 'editable-list'"></app-editable-list>
+      <app-roll-no *ngIf="selectedComponent === 'roll-no'"></app-roll-no>
+      <app-documents *ngIf="selectedComponent === 'documents'"></app-documents>
+      <app-promotion *ngIf="selectedComponent === 'promotion'"></app-promotion>
+      <app-demotion *ngIf="selectedComponent === 'demotion'"></app-demotion>
+      <app-tc *ngIf="selectedComponent === 'tc'"></app-tc>
+      <app-class-change *ngIf="selectedComponent === 'class-change'"></app-class-change>
+    </div>
+  </div>
+  
+</div>
+
+<hr>
+
